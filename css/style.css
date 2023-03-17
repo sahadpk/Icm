@@ -8075,7 +8075,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-800 {
-	background-color: #192531;
+	background-color: #785748;
 }
 
 .bg-gray-800:not([style*="background-"]) + .bg-gray-800:not([style*="background-"]) {
@@ -8112,7 +8112,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-gray-800 {
-	background-color: #192531;
+	background-color: #785748;
 }
 
 .bg-gray-800:not([style*="background-"]) + .bg-gray-800:not([style*="background-"]) {
@@ -8959,6 +8959,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-nav-link {
+	margin-left: 70px;
 	font-size: 14px;
 	font-weight: 600;
 	letter-spacing: .07em;
@@ -17503,4 +17504,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .contact-form .form-label{
 	color: white !important;
 }
+@media screen and (min-width:980px) {
+	.gmap-main{
+		margin-top: 210px;
+		margin-right: 40px;
+		border: 2px solid #a83632;
+		padding: 8px;
+	}
+}
+
 
