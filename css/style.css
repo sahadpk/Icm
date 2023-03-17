@@ -17492,6 +17492,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	height: 20px !important;
 	width: 100%;
 }
-/* .rd-navbar-wrap{
-	height: 105px !important;
-} */
+.contact-form{
+	background-image: url(../images/kiwihug-L4gw27XZN1I-unsplash.jpg);
+	background-repeat: repeat;
+	background-size: cover;
+}
+
