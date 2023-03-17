@@ -17497,4 +17497,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	background-repeat: repeat;
 	background-size: cover;
 }
+.form-input{
+	background-color: transparent !important;
+}
+.contact-form .form-label{
+	color: white !important;
+}
 
