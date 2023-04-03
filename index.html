@@ -12,7 +12,7 @@
     <script src="../../cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script><link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     
- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css2?family=Libre+Baskerville&amp;family=Work+Sans:wght@300;400;600&amp;display=swap">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -372,7 +372,7 @@
         <div class="container">
           <h3>Our Board Members</h3>
           <div class="row row-50 row-xxl-70 offset-top-6 justify-content-center justify-content-lg-start">
-            <div class="col-md-6 col-lg-6 col-sm-6">
+            <div class="col-md-12 col-lg-12 col-sm-12">
               <!-- Profile Creative-->
               <article class="profile-creative">
                 <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/sabupng.png" alt="" width="170" height="172"/>
@@ -389,7 +389,7 @@
                 </div>
               </article>
             </div>
-            <div class="col-md-6 col-lg-6">
+            <div class="col-md-12 col-lg-12 col-sm-12">
              
               <article class="profile-creative">
                 <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/vinod.jpeg" alt="" width="170" height="172"/>
@@ -634,7 +634,7 @@
                 <div class="section-lg">
                   <h3 style="color: white;" class="wow-outer"><span class="wow slideInDown">Contact Us</span></h3>
                   <!-- RD Mailform-->
-                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://ld-wt73.template-help.com/tf/farite_v2/bat/rd-mailform.php">
+                  <form class="rd-form rd-mailform" id="submit-form" data-form-output="form-output-global" data-form-type="contact">
                     <div class="row row-10">
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
@@ -646,7 +646,7 @@
                       <div class="col-md-6 wow-outer">
                         <div class="form-wrap wow fadeSlideInUp">
                           <label class="form-label-outside" for="contact-email">Address</label>
-                          <input class="form-input" id="contact-email" type="email" name="address" data-constraints="address@Required">
+                          <input class="form-input" id="contact-email" type="text" name="address" data-constraints="address@Required">
                         </div>
                       </div>
                       
@@ -838,6 +838,25 @@
     <script src="assets/plugins/aos/aos.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      $("#submit-form").submit((e)=>{
+          e.preventDefault()
+          $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbwuImZNIcTrKf7a_FqQ9NLs54iGrRTdiXjgu3KeKQ-CQQdB4vU6-FiMxbzEdMwju5NR/exec",
+              data:$("#submit-form").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Form submitted successfully")
+                  window.location.reload()
+                  //window.location.href="https://google.com"
+              },
+              error:function (err){
+                  alert("Something Error")
+  
+              }
+          })
+      })
+  </script>
   </body>
 
 
